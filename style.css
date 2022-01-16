@@ -1,0 +1,63 @@
+body {font-family: Arial, Helvetica, sans-serif;}
+form {
+    border: 3px solid #f1f1f1;
+    padding: 16px;
+  width: 60%;
+  margin: auto;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 10px 20px;
+  margin: 10px 10px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+fieldset {
+    border:0px;    
+}
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.6;
+}
+
+.cancelbtn {
+  width: auto;
+  border: #233f22;
+  padding: 10px 18px;
+  background-color: #bb4444;
+}
+
+.container {
+  padding: 16px;
+  width: 80%;
+  margin: auto;
+  border: 3px solid rgb(149, 167, 149);
+}
+#pnlMessage {
+    display:none;
+    width: 60%;
+    color: rgb(235, 15, 15);
+    position: relative;
+    padding: 20px;
+    margin: auto;
+    border: 3px solid rgb(61, 124, 61);
+  }
+@media screen and (max-width: 300px) {
+  .cancelbtn {
+     width: 100%;
+  }
+  span {
+    width: 100%;
+ }
+}

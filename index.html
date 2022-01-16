@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h2>Login Form</h2>
+    <script src="js/validation.js"></script>
+    <form>
+
+        <div class="container">
+            <fieldset>
+                <label for="uname"><b>Username</b></label>
+                <input type="text" id="usr" placeholder="Username" name="uname" title="Enter email in gmail domain"
+                    required>
+                <span id="userError"></span>
+            </fieldset>
+            <fieldset>
+                <label for="psw"><b>Password</b></label>
+                <input type="password" id="psw" name="psw"
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*['%','$','#','@','!']).{6,}"
+                    title="Must contain at least one number and one uppercase and lowercase letter, one of the '%','$','#','@','!' letters and at least 6 or more characters"
+                    required>
+            </fieldset>
+            <button type="submit" id="btn">Login</button>
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+            <button type="button" class="cancelbtn">Cancel</button>
+        </div>
+    </form>
+    <div id="pnlMessage">
+        <div id="MainErrorTag">
+        </div>
+    </div>
+
+    <script>
+        HideServerValidationPanel("pnlMessage");
+        const btn = document.getElementById("btn");
+        btn.addEventListener('click', function () {
+            let myInput = document.getElementById("psw");
+            let myUser = document.getElementById("usr");
+            DisplayErrorsbtn();
+            validateEmail();
+        });
+        var myInput = document.getElementById("psw");
+        myInput.onkeyup = DisplayErrorsbtn;
+        myInput.onfocus = onFocus;
+        myInput.onblur = onBlur;
+
+        var myUser = document.getElementById("usr");
+        myUser.onblur = validateEmail;
+    </script>
+</body>
+
+</html>
